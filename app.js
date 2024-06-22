@@ -11,6 +11,9 @@ connectDB();
 
 app.use(express.json());
 
+app.get('/',(req,res)=>{
+    res.send('Welcome to Employee Review');
+  });
 app.use('/auth', authRoutes);
 app.use('/admin', adminRoutes);
 app.use('/employee', employeeRoutes);
